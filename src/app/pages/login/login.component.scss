@@ -1,0 +1,11 @@
+.formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login div,
+.login .button {
+    margin-top: 10px;
+}

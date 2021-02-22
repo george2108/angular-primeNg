@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+// menu
+#sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #151719;
+    left: -200px;
+    transition: all 500ms linear;
+}
+
+#sidebar.active {
+    left: 0px;
+}
+
+#sidebar ul li {
+    color: rgba(230, 230, 230, .9);
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(100, 100, 100, .3);
+    text-align: center;
+}
+
+.logo {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+#sidebar .toggle-btn {
+    position: absolute;
+    left: 230px;
+    top: 20px;
+    cursor: pointer;
+}
+
+#sidebar .toggle-btn span {
+    display: block;
+    width: 40px;
+    text-align: center;
+    font-size: 30px;
+    border: 3px solid #000;
+}
+
+// donde esta el router outlet para desplazarse a la izquierda con el menu
+#content {
+    margin: 0;
+    padding: 0;
+    transition: all 500ms linear;
+}
+
+#content.active {
+    padding-left: 200px;
+}
